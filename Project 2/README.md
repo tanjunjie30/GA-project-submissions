@@ -106,19 +106,18 @@ Below is the data dictionary for features in the Encoded datasets that have been
 <br/>  
 
 * Location features such as 'planning_area', 'postal' and 'bus_stop_name' revealed a "West premium" as locations in the West exhibited a significantly higher median resale price. However, target encoding using the mean of each category was required in order to extract the information value out of these three features.  
-<br/>
+
 * Proximity to good schools is a bonus and not a primary driver of price determination as seen by the wide range of resale prices across schools of all standings.  
-<br/>
-* A strong positive correlation exists between the max_floor_level of the flats and its resale price. The reason is because in areas such as the CBD area, land prices are more expensive and so developers needed to build taller in order to capitalize on it, inadvertently resulting in the strong correlation.   
-<br/>
+
+* A strong positive correlation exists between the max_floor_level of the flats and its resale price. The reason is because in areas such as the CBD area, land prices are more expensive and so developers needed to build taller in order to capitalize on it, inadvertently resulting in the strong correlation.  
+
 * Density feature such as total_dwelling_units were not particularly useful as it is most likely that everywhere in Singapore is considered dense and so it is not a primary consideration to most homeseekers.  
-<br/>
-* The older the HDB is, the lower its resale price tended to be.   
-<br/>
+
+* The older the HDB is, the lower its resale price tended to be.  
+
 * The closer the flat is to city center ("City Hall"), the higher the resale price.    
 
 
-<br/>
 
 ### Feature Selection  
 
@@ -154,27 +153,27 @@ In total, there are **18 selected features** that will be trained on in the mode
 
 ### Model Fitting and Evaluation  
 
-* Ordinary Linear Regression ("OLS"), RidgeCV Regression and LassoCV Regression models have been used to predict the resale price given a set of flat characteristics.        
-<br/>
-  
+* Ordinary Linear Regression ("OLS"), RidgeCV Regression and LassoCV Regression models have been used to predict the resale price given a set of flat characteristics.  
+
 * All features have been standard-scaled to improve the performnance of modeling although standard-scaling did not have any effect on the basic OLS model.  
-<br/>
-* Beyond a certain number of features and degree of polynomials, the model's accuracy performance ceased to improve meaningfully. The optimal model which produced the lowest root-mean-squared-error ("RMSE") was found to be the one with a set of 18 features and raised to a polynomial degree of four that encompasses the gamut of interaction terms comprising of the four major factors of location, size, amenities and age.
-<br/>
-* With virtually similar RMSE between the training, baseline and Kaggle testing datasets, all variations of the models have no signs of overfitting. Therefore, both RidgeCV and LassoCV were not able to deliver improvements on the optimal model of 18 features.     
-<br/>
+
+* Beyond a certain number of features and degree of polynomials, the model's accuracy performance ceased to improve meaningfully. The optimal model which produced the lowest root-mean-squared-error ("RMSE") was found to be the one with a set of 18 features and raised to a polynomial degree of four that encompasses the gamut of interaction terms comprising of the four major factors of location, size, amenities and age.  
+
+* With virtually similar RMSE between the training, baseline and Kaggle testing datasets, all variations of the models have no signs of overfitting. Therefore, both RidgeCV and LassoCV were not able to deliver improvements on the optimal model of 18 features.  
+  
+  
 
 ### Model Results Benchmarking
 <br/>
 
 |Model|Std.Scaled|Num_of_Features|training_RMSE|baseline_RMSE|RidgeCV_RMSE|LassoCV_RMSE|Polynomial_4_train_RMSE|Polynomial_4_baseline_RMSE|Num_of_Poly_Features|Recommended
 |---|---|---|---|---|---|---|---|---|---|---|
-|1|	Yes|	14|	\$ 55,260|	\$ 54,975|	\$55,240|	\$55,261|	\$ 38,779|	\$ 38,216|	3,060|	
-|2|	Yes|	15|	\$ 54,877|	\$ 54,641|	\$ 54,855|	\$ 54,877|	\$ 37,693|	\$ 37,654|	3,876|	
-|3|	Yes|	16|	\$ 54,855|	\$ 54,624|	\$ 54,833|	\$ 54,855|	\$ 37,671|	\$ 37,758|	4,845|	Yes|
-|4|	Yes|	18|	\$ 54,860|	\$ 54,630|	\$ 54,834|	\$ 54,859|	\$ 37,760|	\$ 37,766|	7,315|	
-|5|	Yes|	21|	\$ 54,849|	\$ 54,609|	\$ 54,821|	\$ 54,849|	n/a|	n/a|	n/a|	
-|6|	Yes|	28|	\$ 54,571|	\$ 54,314|	\$ 54,550|	\$54,571|	n/a|	n/a|	n/a|	
+|1| Yes|  14| \$ 55,260|  \$ 54,975|  \$55,240| \$55,261| \$ 38,779|  \$ 38,216|  3,060|  
+|2| Yes|  15| \$ 54,877|  \$ 54,641|  \$ 54,855|  \$ 54,877|  \$ 37,693|  \$ 37,654|  3,876|  
+|3| Yes|  16| \$ 54,855|  \$ 54,624|  \$ 54,833|  \$ 54,855|  \$ 37,671|  \$ 37,758|  4,845|  Yes|
+|4| Yes|  18| \$ 54,860|  \$ 54,630|  \$ 54,834|  \$ 54,859|  \$ 37,760|  \$ 37,766|  7,315|  
+|5| Yes|  21| \$ 54,849|  \$ 54,609|  \$ 54,821|  \$ 54,849|  n/a|  n/a|  n/a|  
+|6| Yes|  28| \$ 54,571|  \$ 54,314|  \$ 54,550|  \$54,571| n/a|  n/a|  n/a|  
 
 
 ---
@@ -202,21 +201,19 @@ In total, there are **18 selected features** that will be trained on in the mode
 ### Conclusions and Recommendations
 
 
-* Location is not King! SIZE IS KING!
-<br/>
-* Size > Location > Age > Amenities
-<br/>
-* Locations closer to city centre (“City Hall”) are more expensive and taller!
-<br/>
-* Locations in the West tend to command a higher premium
-<br/>
-* Among the Amenities, proximity to MRT has the biggest premium
-<br/>
+* Location is not King! SIZE IS KING!  
+
+* Size > Location > Age > Amenities  
+
+* Locations closer to city centre (“City Hall”) are more expensive and taller!  
+
+* Locations in the West tend to command a higher premium  
+
+* Among the Amenities, proximity to MRT has the biggest premium  
+
 * Proximity to good schools is a bonus, not a primary consideration for most
-<br/>  
+  
 
 
 
-
----
 

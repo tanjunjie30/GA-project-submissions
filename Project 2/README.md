@@ -103,7 +103,6 @@ Below is the data dictionary for features in the Encoded datasets that have been
 
 
 * Preliminary analysis of the original dataset showed that out of a total of 75 relevant features provided, location features including 'address', 'postal', 'bus_stop_name' ranked highest in the information scores against resale_price. Size features including 'floor_area_sqm' and 'full_flat_type' followed closely behind in relevance. Amenities such as 'precinct_pavilion', 'multistorey_carpark' and 'market hawker' ranked lowest.  
-<br/>  
 
 * Location features such as 'planning_area', 'postal' and 'bus_stop_name' revealed a "West premium" as locations in the West exhibited a significantly higher median resale price. However, target encoding using the mean of each category was required in order to extract the information value out of these three features.  
 
@@ -153,7 +152,7 @@ In total, there are **18 selected features** that will be trained on in the mode
 
 ### Model Fitting and Evaluation  
 
-* Ordinary Linear Regression ("OLS"), RidgeCV Regression and LassoCV Regression models have been used to predict the resale price given a set of flat characteristics.  
+* Ordinary Linear Regression ("OLS"), RidgeCV Regression and LassoCV Regression models have been used to predict the resale price given a set of flat characteristics. Thereafter, the degree of polynomial of each model tested was incrementally raised to find the optimal degree that produces the lowest RMSE.
 
 * All features have been standard-scaled to improve the performnance of modeling although standard-scaling did not have any effect on the basic OLS model.  
 
@@ -191,19 +190,22 @@ In total, there are **18 selected features** that will be trained on in the mode
 
 * Trained only on historical data from 2012-2022. Model will need to be retrained on the latest data again if market regime changes drastically. 
 
-* The Simple model with just 18 features does not capture sufficient value-add from feature interaction.
+* The Simple OLS model with just 18 features does not capture sufficient value-add from feature interaction.
 
-* The Complex polynomial model is unintuitive and unwieldy with 7,315 features despite its accuracy.
+* The corresponding polynomial version with 7,315 features is unintuitive and unwieldy despite its accuracy.
 
-* Model can only capture 80-90% of price variation meaning clients will still have 10-20% buffer with which they will need to budget for.
+* The basic OLS Model can only capture 85% of price variation meaning clients will still have 10-20% buffer with which they will need to budget for.
 
 
 ### Conclusions and Recommendations
 
+* The basic OLS model of 18 selected features is recommended for the real estate company as it is simple and easy to understand. While its accuracy score could be improved by another 3% with its polynomial degree raised to four, the explosion from 18 features to 7,315 features renders it unwieldy and unintuitive to people.  
 
+* Users of the basic OLS model can expect +/-10% error on average. 
+  
 * Location is not King! SIZE IS KING!  
 
-* Size > Location > Age > Amenities  
+* Ranking of Factors: Size > Location > Age > Amenities  
 
 * Locations closer to city centre (“City Hall”) are more expensive and taller!  
 
@@ -211,8 +213,13 @@ In total, there are **18 selected features** that will be trained on in the mode
 
 * Among the Amenities, proximity to MRT has the biggest premium  
 
-* Proximity to good schools is a bonus, not a primary consideration for most
+* Proximity to good schools is a bonus, not a primary consideration for most.
   
+
+
+
+
+---
 
 
 

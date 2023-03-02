@@ -174,8 +174,12 @@ In total, there are **18 selected features** that will be trained on in the mode
 |5| Yes|  21| \$ 54,849|  \$ 54,609|  \$ 54,821|  \$ 54,849|  n/a|  n/a|  n/a|  
 |6| Yes|  28| \$ 54,571|  \$ 54,314|  \$ 54,550|  \$54,571| n/a|  n/a|  n/a|  
 
+  
+  
+![Kaggle Submission Score](kaggle_score.png)
 
 ---
+
 
 
 

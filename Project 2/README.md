@@ -22,7 +22,7 @@ They require a reproducible model to predict HDB resale prices based on availabl
 
 #### Provided Data
 
-There are three groups of datasets included in the [`data`](./data/) folder for this project. These contain the relevant features that describe the characteristics of each HDB resale flat transactions for the decade of 2012-2022.
+There are three groups of datasets included in the [`datasets`](./datasets/) folder for this project. These contain the relevant features that describe the characteristics of each HDB resale flat transactions for the decade of 2012-2022.
 
 1. **Original datasets** (*source:*  https://www.kaggle.com/competitions/dsi-sg-project-2-regression-challenge-hdb-price/data)
   
@@ -220,7 +220,6 @@ In total, there are **18 selected features** that will be trained on in the mode
 
 
 ---
-
 
 
 

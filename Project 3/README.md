@@ -51,7 +51,7 @@ In titles alone, r\askSingapore tends to have a much tighter distribution of wor
 
 
 ***Sentiment Analysis***  
-In titles alone, r/askSingapore shows a slightly more positive tone with a compound score of +0.06 versus a score of +0.03 for r/Singapore. However, when all_text (titles+selftext) are assessed, the positive tone of r/askSingapore beomes more apparent with a score of +0.32 versus +0.07 for r/Singapore.  
+In titles alone, r/askSingapore shows a slightly more positive tone with a compound score of +0.06 versus a score of +0.03 for r/Singapore. However, when _all_text_ (titles+selftext) are assessed, the positive tone of r/askSingapore beomes more apparent with a score of +0.32 versus +0.07 for r/Singapore.  
 
 
 ***Common Words***  

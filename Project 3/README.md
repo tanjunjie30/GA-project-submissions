@@ -1,3 +1,4 @@
+# Markdown syntax guide
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) 
 
 
@@ -37,9 +38,10 @@ There are three datasets included in the [`datasets`](./datasets/) folder for th
   
 3. **cleaned_reddit_posts.csv** - Posts from the two subreddits combined in 50:50 proportions and pre-processed for EDA and modeling  
         * Headers: subreddit, selftext, title, all_text, clean_text, subreddit_label  
-                * all_text: title and selftext combined
-                * clean_text: processed all_text using BeautifulSoup, regex, nltk packages
-                * subreddit_label: label encoding of subreddit where r/Singapore=0 and r/askSingapore=1
+                * all_text: title and selftext combined  
+                * clean_text: processed all_text using BeautifulSoup, regex, nltk packages  
+                * subreddit_label: label encoding of subreddit where r/Singapore=0 and r/askSingapore=1  
+                
   
 ---  
      
@@ -86,9 +88,9 @@ An analysis of the most common words in all_text between the classes revealed th
 |RandomForest_tvec|79%|100|Yes|
 |LogisticRegression_cvec|80%|4,000|  
 
-                                        *accuracy score=average of train+test scores
-                                         tvec - TF-IDF Vectorizer
-                                         cvec - Count Vectorizer
+_*accuracy score=average of train+test scores_  
+_tvec - TF-IDF Vectorizer_  
+_cvec - Count Vectorizer_
   
   
 

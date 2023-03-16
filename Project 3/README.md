@@ -57,6 +57,7 @@ In titles alone, r/askSingapore shows a slightly more positive tone with a compo
 ***Common Words***  
 An analysis of the most common words in all_text between the classes revealed that there are a total of 754 words (in their stemmed and lemmatized forms) common to both r/Singapore and r/askSingapore. Out of these, 111 words have been found by hypothesis testing to have the same mean frequency of occurrences which suggest that these words can potentially be removed as additional stopwords since they are unlikely to provide informational value and will only add noise to our models that rely on word-counting to represent the word tokens. 
 
+---
 
 ### Model Selection Methodology  
 
@@ -69,6 +70,7 @@ An analysis of the most common words in all_text between the classes revealed th
 * The best model will then be selected based on the best 'Accuracy Score'. 
 
 
+---
 
 
 ### Model Results Benchmarking  
@@ -91,6 +93,7 @@ _*accuracy score=average of train+test scores_
 _tvec - TF-IDF Vectorizer_  
 _cvec - Count Vectorizer_
   
+---
   
 
 ### Best Model Evaluation  
@@ -120,6 +123,7 @@ _cvec - Count Vectorizer_
       
 * This further corroborates our EDA's findings that posts in r/askSingapore tend to be significantly more positive in tone than r/Singapore which is why the model has been able overweighting the presence of such words to give a more accurate classification.  
 
+---
 
 ### Conclusions and Recommendations
 

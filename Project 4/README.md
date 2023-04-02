@@ -86,11 +86,35 @@ The best model was found to be LogReg with a train/validation `area_under_curve`
   
 #### Model Coefficients Ranking
 
+|Feature|Coefficient_exponentiated|
+|:---|:---:|
+|NumMosquitos_cluster|1.137201|
+|month|1.114425|
+|weekly_Tavg_lag_3|1.112479|
+|weekly_Tavg_lag_2|1.104231|
+|trap_cluster|1.093664|
+|weekly_StnPressure_lag_4|1.089194|
+|daily_Tavg_lag_2|1.087275|
+|weekly_Tavg_lag_1|1.063897|
+|weekly_StnPressure_lag_3|1.057296|
+|daily_rh_lag_4|1.047616|
+|superHot_Wet_lag_3|1.046634|
+|daily_rh_lag_2|1.044773|
+|Latitude|1.036143|
+|Hot_Wet_lag_3|1.030259|
+|weekly_StnPressure_lag_2|1.022086|
+|superHot_Dry_lag_3|1.014562|
+|weekly_precip_lag_3|0.978743|
+|Hot_Dry_lag_3|0.964963|
+|weekly_precip_lag_4|0.958408|
+|Cool_Dry_lag_3|0.949527|
+|Longitude|0.943808|
+|superHot_Dry_lag_1|0.930454|
+|Cool_Wet_lag_3|0.929885|
 
-![Model Coefficients Ranking](model_coefficients.png)
 
-
-
+  
+![Cost-Benefit Analysis](cost_benefit_analysis.png)
 
 ### Conclusions and Recommendations
 

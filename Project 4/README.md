@@ -112,9 +112,33 @@ The best model was found to be LogReg with a train/validation `area_under_curve`
 |superHot_Dry_lag_1|0.930454|
 |Cool_Wet_lag_3|0.929885|
 
+  
+#### Cost-Benefit Analysis  
+  
+||Chicago's Spraying|With our Model|
+|---|---|---|
+|Number of Infected Human Cases|66|15<sup>*</sup>|
+|Average Medical Burden Cost per case (US$)<sup>1</sup>|21,000|21,000|
+|**Total Medical Burden Costs (US$)**|**1,386,000**|**304,920**|
+|Average Spray Cost per acre (US$)<sup>2</sup>|1.60|1.60|
+|Total Spray(ed) Area, acres|60,234<sup>^</sup>|338,081|
+|**Total Spray Costs (US$)**|**96,374**|**540,926**|
+|**Total Costs (US$)<sup>3</sup>**|**1,483,000**|**846,000**|  
+  
+**_List of Assumptions:_**
+
+<sup>*</sup>We assumed that the actual infected human cases could have been reduced proportionately by a factor of our Model’s recall rate of 0.78:  [(1-Recall rate) x Actual cases]
+
+<sup>1</sup>According to a study published in the Journal of Infectious Diseases in 2014
+
+<sup>2</sup>Assumed spray used is Larvicide which is less harmful to humans and environment and has a longer duration of 1-28 days depending on sunlight levels
+
+<sup>3</sup>Total Costs=Total Medical Burden costs + Total Spray Costs
+
+<sup>^</sup>Actual sprayed area is based on the spray data provided, added with an effective radial zone of 100meters from each spray point
 
   
-![Cost-Benefit Analysis](cost_benefit_analysis.png)
+
 
 ### Conclusions and Recommendations
 

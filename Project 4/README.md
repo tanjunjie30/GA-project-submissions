@@ -117,7 +117,7 @@ The best model was found to be LogReg with a train/validation `area_under_curve`
   
 ||Chicago's Spraying|With our Model|
 |---|---|---|
-|Number of Infected Human Cases|66<sup>#</sup>||15<sup>*</sup>|
+|Number of Infected Human Cases|66<sup>#</sup>|15<sup>*</sup>|
 |Average Medical Burden Cost per case (US$)<sup>1</sup>|21,000|21,000|
 |**Total Medical Burden Costs (US$)**|**1,386,000**|**304,920**|
 |Average Spray Cost per acre (US$)<sup>2</sup>|1.60|1.60|

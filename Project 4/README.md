@@ -113,7 +113,7 @@ The best model was found to be LogReg with a train/validation `area_under_curve`
 |Cool_Wet_lag_3|0.929885|
 
   
-#### Cost-Benefit Analysis  
+### Cost-Benefit Analysis  
   
 ||Chicago's Spraying|With our Model|
 |---|---|---|

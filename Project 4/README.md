@@ -4,7 +4,16 @@
 # Project 4: West Nile Virus Prediction
 
 
-### Problem Statement
+### Introduction 
+
+The West Nile virus outbreak in Chicago occurred in 2002, and was one of the largest outbreaks of the virus in the United States. The outbreak began in early July, and by the end of the summer, there were a total of 290 confirmed human cases of West Nile virus in the city, including 22 deaths.
+
+The outbreak was particularly severe in the Chicago metropolitan area, where a high density of mosquitoes and a large population of susceptible humans provided ideal conditions for the virus to spread. The majority of cases occurred in older adults, who are at higher risk for severe disease and death from West Nile virus.
+
+In response to the outbreak, the city of Chicago implemented a number of measures to control the mosquito population and prevent further transmission of the virus. This included widespread spraying of insecticides, removal of standing water sources where mosquitoes breed, and public education campaigns to promote personal protective measures such as using insect repellent and wearing long-sleeved clothing.
+
+The 2002 West Nile virus outbreak in Chicago served as a stark reminder of the potential risks of emerging infectious diseases, and highlighted the importance of public health preparedness and response to these types of outbreaks.
+
 
 West Nile virus is most commonly spread to humans through infected mosquitos. Around 20% of people who become infected with the virus develop symptoms ranging from a persistent fever, to serious neurological illnesses that can result in death. The City of Chicago and CPHD needs a model that can help them to predict more efficiently and effectively where and when the mosquitos will become virulent so that they can allocate resources towards preventing transmission of this potentially deadly virus. 
 
@@ -25,9 +34,10 @@ The main datasets used will be from Kaggle.
 
 ***1) EDA on Train and Test sets***  
 
-In this section, two new features, `NumMosquitos_cluster` and `trap_cluster` have been engineered to encode information on `NumMosquitos` and `WnvPresent` respectively into the 151 unique `Trap` by means of a clustering algorithm. Each new feature has three unique values of 1,2,3 where 1 has the smallest cluster of NumMosquitos or WnvPresent and 3 being the biggest cluster. The reasoning is that `Trap` close to each other in proximity is likely to have similar levels of risk.   
+* There are mainly 2 types of mosquitos that are WNV positive, which is the Culex Pipiens and Culex Restuans. 
 
-This clustering allows us to encode information otherwise absent in the `test` dataset. Both features also provide information on the level of a virulent risk.  
+* Two novel features, denoted as NumMosquitos_cluster and trap_cluster, were derived from the existing features NumMosquitos and WnvPresent, respectively, using a clustering algorithm applied to the 151 unique Trap locations. Each of the new features comprises three discrete values (1, 2, or 3), corresponding to the size of the cluster of NumMosquitos or WnvPresent, with 1 representing the smallest cluster and 3 indicating the largest. This approach was motivated by the assumption that Trap locations in close proximity are likely to exhibit similar levels of risk.
+
   
 ***2) EDA on Weather set***  
 
@@ -50,7 +60,7 @@ By using our model's recommendations on where, when, and how much to spray, Chic
 
 By computing their total sprayed areas in 2011 and 2013, and comparing them against our model's recommendations, we can quantify and evaluate different approaches for the most cost-effective method of spraying.  
   
-***4) More EDA on Train plus Weather sets***  
+***4) Combined EDA with Training sets and Weather sets***  
 
 This notebook goes into more details uncovering the relationships between the weekly time lags of various weather features and the `WnvPresent` and `NumMosquitos`.  
 
